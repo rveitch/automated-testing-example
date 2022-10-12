@@ -1,0 +1,18 @@
+{
+  "name": "automated-testing-example",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rveitch/automated-testing-example.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
