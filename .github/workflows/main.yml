@@ -18,18 +18,21 @@ jobs:
 
     # Steps this job must take to complete
     steps:
-      # Reference the main branch. For more information visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+      # Reference the main branch of the checkout action to stay up-to-date.
+      # For more information visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+      # Action: https://github.com/actions/checkout
       - name: Checkout under $GITHUB_WORKSPACE
         uses: actions/checkout@main
 
-      # Specify which version of Node this project is using. For more information visit.
-      # https://docs.github.com/en/actions/guides/building-and-testing-nodejs#specifying-the-nodejs-version
+      # Specify which version of Node this project is using.
+      # For more information visit https://docs.github.com/en/actions/guides/building-and-testing-nodejs#specifying-the-nodejs-version
+      # Action: https://github.com/actions/setup-node
       - name: Set up NodeJS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@main
         with:
-          node-version: 14
+          node-version: '14.x'
 
-      - name: Install all dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Run Jest Tests
