@@ -18,7 +18,7 @@ jobs:
 
     # Steps this job must take to complete
     steps:
-      # Reference the main branch of the checkout action to stay up-to-date.
+      # Checks-out the repository by the ref/SHA that triggered the workflow. (The current commit of the PR branch)
       # For more information visit https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsuses
       # Action: https://github.com/actions/checkout
       - name: Checkout under $GITHUB_WORKSPACE
